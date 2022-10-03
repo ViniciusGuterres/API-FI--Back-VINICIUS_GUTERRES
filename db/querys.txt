@@ -7,3 +7,13 @@ create table User_VG (
 	office_role varchar NOT NULL,
 	sector varchar
 );
+
+-- create movies table 
+create table Movies_VG (
+	id serial primary key,
+	name varchar not null,
+	is_on_nextflix boolean not null,
+	imdb_score int,
+	director varchar NOT NULL,
+	genre varchar NOT NULL
+);
