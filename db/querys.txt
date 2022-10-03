@@ -1,0 +1,9 @@
+-- create user table User_VG Table
+create table User_VG (
+	id serial primary key,
+	name varchar not null,
+	birth_date timestamp not null,
+	access_level int NOT NULL,
+	office_role varchar NOT NULL,
+	sector varchar
+);
