@@ -43,7 +43,7 @@ exports.saveUser = (paramsObject) => {
     const executeQuery = () => {
         const query = `
             INSERT INTO User_vg (name, birth_date, access_level, office_role, sector)
-            VALUES ('${name}', '${birth_date}', ${access_level}, '${office_role}', '${sector}') RETURNING id;
+            VALUES ('${name}', '${birth_date}', ${access_level}, '${office_role}', '${sector || null}') RETURNING id;
         `;
 
         const succesful = (data) => {
