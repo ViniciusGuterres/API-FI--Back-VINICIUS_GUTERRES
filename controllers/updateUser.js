@@ -36,13 +36,6 @@ async function putUser(req, res, next) {
         return;
     }
 
-    // if (birth_date) {
-    //     console.log("controllers/updateUser - missing req.birth_date");
-    //     objReturn.error = "missing req.birth_date";
-    //     controllerReturn(objReturn, res);
-    //     return;
-    // }
-
     if (access_level && (typeof access_level != 'number')) {
         console.log("controllers/updateUser - missing req.access_level or wrong format");
         objReturn.error = "missing req.access_level or wrong format";
