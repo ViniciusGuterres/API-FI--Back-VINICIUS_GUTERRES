@@ -10,6 +10,7 @@
 3°) Criar tabelas:
 
 -- create user table User_VG Table
+`
 create table User_VG (
 	id serial primary key,
 	name varchar not null,
@@ -18,8 +19,10 @@ create table User_VG (
 	office_role varchar NOT NULL,
 	sector varchar
 );
+`
 
 -- create movies table 
+`
 create table Movies_VG (
 	id serial primary key,
 	name varchar not null,
@@ -28,5 +31,6 @@ create table Movies_VG (
 	director varchar NOT NULL,
 	genre varchar NOT NULL
 );
+`
 
 4°) Iniciar o servidor: node server.js
