@@ -87,3 +87,5 @@ put: http://localhost:3000/updateUser/3 - com o id do usuário a ser atualizado 
         "office_role": "Auxiliar",
         "sector": "ADM"
 }
+
+8°) Para usar outras configurações da base de dados, alterar o arquivo settings.js na raiz do projeto.
