@@ -36,7 +36,7 @@ create table Movies_VG (
 
 4°) Iniciar o servidor: node server.js
 
-6°) API para as rotas de filmes:
+6°) Rotas de filmes:
 `
 get: http://localhost:3000/getMovies - para pegar a lista de filmes
 
@@ -60,3 +60,27 @@ put: http://localhost:3000/updateMovie/3 - com o id do filme a ser atualizado e 
     "genre": "musical"
 }
 `
+7°) Rotas para os users:
+
+get: http://localhost:3000/getUsers - para pegar a lista de usuários
+get: http://localhost:3000/getUsers/1 - Para pegar um usuário especifico com o id no final da url
+
+delete: http://localhost:3000/deleteUser/3 - com o id do usuário a ser excluído
+
+post: http://localhost:3000/createUser com o body no formato a seguir:
+{
+	"name": "vinicius",
+	"birth_date": "20-09-2009",
+	"access_level": 1,
+	"office_role": "Auxiliar",
+	"sector": "ADM"
+}
+
+put: http://localhost:3000/updateUser/3 - com o id do usuário a ser atualizado e body no formato a seguir:
+{
+        "name": "vinicius",
+        "birth_date": "20-09-2009",
+        "access_level": 1,
+        "office_role": "Auxiliar",
+        "sector": "ADM"
+}
