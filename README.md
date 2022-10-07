@@ -3,11 +3,11 @@
 2°) criar base de dados postgres com os seguintes parâmetros:
     user: 'postgres',
     host: 'localhost',
-    database: 'faculdade',
+    database: 'Faculdade',
     password: 'admin',
     port: 5432
 
-3°) Criar tabelas:
+3°) O Script cria as tableas automaticamente, mas se quiser criar manualmente use os script sql a seguir:
 
 -- create user table User_VG Table
 `
