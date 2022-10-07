@@ -37,7 +37,7 @@ create table Movies_VG (
 4°) Iniciar o servidor: node server.js
 
 6°) Rotas de filmes:
-`
+
 get: http://localhost:3000/getMovies - para pegar a lista de filmes
 
 post: http://localhost:3000/createMovie com o body no formato a seguir:
@@ -59,7 +59,7 @@ put: http://localhost:3000/updateMovie/3 - com o id do filme a ser atualizado e 
     "director": "james cameron",
     "genre": "musical"
 }
-`
+
 7°) Rotas para os users:
 
 get: http://localhost:3000/getUsers - para pegar a lista de usuários
