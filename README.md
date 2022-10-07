@@ -40,6 +40,8 @@ create table Movies_VG (
 
 get: http://localhost:3000/getMovies - para pegar a lista de filmes
 
+get: http://localhost:3000/getMovies/1 - para pegar o filme do id passado na url
+
 post: http://localhost:3000/createMovie com o body no formato a seguir:
 {
     "name": "la la land",
@@ -63,6 +65,7 @@ put: http://localhost:3000/updateMovie/3 - com o id do filme a ser atualizado e 
 7°) Rotas para os users:
 
 get: http://localhost:3000/getUsers - para pegar a lista de usuários
+
 get: http://localhost:3000/getUsers/1 - Para pegar um usuário especifico com o id no final da url
 
 delete: http://localhost:3000/deleteUser/3 - com o id do usuário a ser excluído
