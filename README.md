@@ -1,5 +1,6 @@
 # API-FI--Back-VINICIUS_GUTERRES
 1°) npm init
+
 2°) criar base de dados postgres com os seguintes parâmetros:
     user: 'postgres',
     host: 'localhost',
