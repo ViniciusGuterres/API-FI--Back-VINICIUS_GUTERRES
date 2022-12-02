@@ -16,8 +16,4 @@ create table Movies_VG (
 	imdb_score int,
 	director varchar NOT NULL,
 	genre varchar NOT NULL
-<<<<<<< Updated upstream
 );
-=======
-);
->>>>>>> Stashed changes

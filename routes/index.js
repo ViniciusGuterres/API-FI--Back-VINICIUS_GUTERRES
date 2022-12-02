@@ -4,8 +4,4 @@ const MovieRoutes = require('./MovieRoutes');
 module.exports = (app) => {
     UsersRoutes(app);
     MovieRoutes(app);
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

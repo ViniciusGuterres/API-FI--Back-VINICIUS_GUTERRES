@@ -2,12 +2,6 @@
 const saveUserModel = require('../models/saveUser.js').saveUser;
 
 async function postUser(req, res, next) {
-<<<<<<< Updated upstream
-=======
-    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-
->>>>>>> Stashed changes
     const objReturn = {
         data: null,
         error: null
@@ -42,15 +36,9 @@ async function postUser(req, res, next) {
         return;
     }
 
-<<<<<<< Updated upstream
     if (!access_level || (typeof access_level != 'number')) {
         console.log("controllers/saveUser - missing req.access_level or wrong format");
         objReturn.error = "missing req.access_level or wrong format";
-=======
-    if (!access_level) {
-        console.log("controllers/saveUser - missing req.access_level");
-        objReturn.error = "missing req.access_level";
->>>>>>> Stashed changes
         controllerReturn(objReturn, res);
         return;
     }
@@ -98,8 +86,4 @@ function controllerReturn(objReturn, res) {
     res.status(201).send(objReturn);
 }
 
-<<<<<<< Updated upstream
 exports.postUser = postUser;
-=======
-exports.postUser = postUser;
->>>>>>> Stashed changes

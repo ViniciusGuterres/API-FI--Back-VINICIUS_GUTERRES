@@ -19,8 +19,4 @@ app.listen(3000, () => {
             console.log('Tables User_VG and Movies_VG created successfully');
         }
     })
-<<<<<<< Updated upstream
 });
-=======
-});
->>>>>>> Stashed changes
