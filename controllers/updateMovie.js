@@ -39,13 +39,6 @@ async function putMovie(req, res, next) {
         return;
     }
 
-    if (is_on_nextflix && (typeof is_on_nextflix != 'boolean')) {
-        console.log("controllers/updateMovie - missing req.is_on_nextflix or wrong format");
-        objReturn.error = "missing req.is_on_nextflix or wrong format";
-        controllerReturn(objReturn, res);
-        return;
-    }
-
     if (imdb_score && (typeof imdb_score != 'number')) {
         console.log("controllers/updateMovie - missing req.imdb_score or wrong format");
         objReturn.error = "missing req.imdb_score or wrong format";

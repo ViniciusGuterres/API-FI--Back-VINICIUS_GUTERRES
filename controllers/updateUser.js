@@ -39,7 +39,7 @@ async function putUser(req, res, next) {
         return;
     }
 
-    if (access_level && (typeof access_level != 'number')) {
+    if (!access_level) {
         console.log("controllers/updateUser - missing req.access_level or wrong format");
         objReturn.error = "missing req.access_level or wrong format";
         controllerReturn(objReturn, res);
