@@ -17,7 +17,7 @@ async function postMovie(req, res, next) {
         return;
     }
 
-    const {
+    let {
         name,
         is_on_nextflix,
         imdb_score,
@@ -32,14 +32,7 @@ async function postMovie(req, res, next) {
         return;
     }
 
-    if (!is_on_nextflix || (typeof is_on_nextflix != 'boolean')) {
-        console.log("controllers/saveMovie - missing req.is_on_nextflix");
-        objReturn.error = "missing req.is_on_nextflix or wrong format";
-        controllerReturn(objReturn, res);
-        return;
-    }
-
-    if (imdb_score && (typeof imdb_score != 'number')) {
+    if (!imdb_score) {
         console.log("controllers/saveMovie - missing req.imdb_score or wrong format");
         objReturn.error = "missing req.imdb_score or wrong format";
         controllerReturn(objReturn, res);
@@ -59,6 +52,12 @@ async function postMovie(req, res, next) {
         controllerReturn(objReturn, res);
         return;
     }
+
+    if (!is_on_nextflix) {
+        is_on_nextflix = false;
+    }
+
+    imdb_score = Number(imdb_score);
 
     const saveMovieRes = await saveMovieModel({
         name,
