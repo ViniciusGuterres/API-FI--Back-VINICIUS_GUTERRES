@@ -2,6 +2,12 @@
 const deleteMovieModel = require('../models/deleteMovie.js').deleteMovie;
 
 async function deleteMovie(req, res, next) {
+<<<<<<< Updated upstream
+=======
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+
+>>>>>>> Stashed changes
     const objReturn = {
         data: null,
         error: null
@@ -46,4 +52,8 @@ function controllerReturn(objReturn, res) {
     res.status(201).send(objReturn);
 }
 
+<<<<<<< Updated upstream
 exports.deleteMovie = deleteMovie;
+=======
+exports.deleteMovie = deleteMovie;
+>>>>>>> Stashed changes

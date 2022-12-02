@@ -43,7 +43,11 @@ exports.saveUser = (paramsObject) => {
     const executeQuery = () => {
         const query = `
             INSERT INTO User_vg (name, birth_date, access_level, office_role, sector)
+<<<<<<< Updated upstream
             VALUES ('${name}', '${birth_date}', ${access_level}, '${office_role}', '${sector || null}') RETURNING id;
+=======
+            VALUES ('${name}', '${birth_date}', ${access_level}, '${office_role}', '${sector}') RETURNING id;
+>>>>>>> Stashed changes
         `;
 
         const succesful = (data) => {
@@ -61,4 +65,8 @@ exports.saveUser = (paramsObject) => {
     return db.connect()
         .then(executeQuery)
         .catch(error)
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

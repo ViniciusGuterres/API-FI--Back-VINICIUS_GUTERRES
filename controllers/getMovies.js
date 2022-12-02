@@ -2,6 +2,12 @@
 const getMoviesModel = require('../models/getMovies.js').getMovies;
 
 async function getMovies(req, res, next) {
+<<<<<<< Updated upstream
+=======
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+
+>>>>>>> Stashed changes
     const objReturn = {
         data: null,
         error: null
@@ -36,4 +42,8 @@ function controllerReturn(objReturn, res) {
     res.status(201).send(objReturn);
 }
 
+<<<<<<< Updated upstream
 exports.getMovies = getMovies;
+=======
+exports.getMovies = getMovies;
+>>>>>>> Stashed changes

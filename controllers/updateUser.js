@@ -2,6 +2,12 @@
 const updateUserModel = require('../models/updateUser.js').updateUser;
 
 async function putUser(req, res, next) {
+<<<<<<< Updated upstream
+=======
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+
+>>>>>>> Stashed changes
     const objReturn = {
         data: null,
         error: null
@@ -36,6 +42,16 @@ async function putUser(req, res, next) {
         return;
     }
 
+<<<<<<< Updated upstream
+=======
+    // if (birth_date) {
+    //     console.log("controllers/updateUser - missing req.birth_date");
+    //     objReturn.error = "missing req.birth_date";
+    //     controllerReturn(objReturn, res);
+    //     return;
+    // }
+
+>>>>>>> Stashed changes
     if (access_level && (typeof access_level != 'number')) {
         console.log("controllers/updateUser - missing req.access_level or wrong format");
         objReturn.error = "missing req.access_level or wrong format";

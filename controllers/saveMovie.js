@@ -2,6 +2,12 @@
 const saveMovieModel = require('../models/saveMovie.js').saveMovie;
 
 async function postMovie(req, res, next) {
+<<<<<<< Updated upstream
+=======
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+
+>>>>>>> Stashed changes
     const objReturn = {
         data: null,
         error: null
@@ -14,7 +20,11 @@ async function postMovie(req, res, next) {
         return;
     }
 
+<<<<<<< Updated upstream
     const {
+=======
+    let {
+>>>>>>> Stashed changes
         name,
         is_on_nextflix,
         imdb_score,
@@ -29,6 +39,7 @@ async function postMovie(req, res, next) {
         return;
     }
 
+<<<<<<< Updated upstream
     if (!is_on_nextflix || (typeof is_on_nextflix != 'boolean')) {
         console.log("controllers/saveMovie - missing req.is_on_nextflix");
         objReturn.error = "missing req.is_on_nextflix or wrong format";
@@ -39,6 +50,11 @@ async function postMovie(req, res, next) {
     if (imdb_score && (typeof imdb_score != 'number')) {
         console.log("controllers/saveMovie - missing req.imdb_score or wrong format");
         objReturn.error = "missing req.imdb_score or wrong format";
+=======
+    if (!imdb_score) {
+        console.log("controllers/saveMovie - missing req.imdb_score");
+        objReturn.error = "missing req.imdb_score";
+>>>>>>> Stashed changes
         controllerReturn(objReturn, res);
         return;
     }
@@ -56,6 +72,13 @@ async function postMovie(req, res, next) {
         controllerReturn(objReturn, res);
         return;
     }
+<<<<<<< Updated upstream
+=======
+    
+    if (!is_on_nextflix) {
+    	is_on_nextflix = false;
+    }
+>>>>>>> Stashed changes
 
     const saveMovieRes = await saveMovieModel({
         name,
@@ -86,4 +109,8 @@ function controllerReturn(objReturn, res) {
     res.status(201).send(objReturn);
 }
 
+<<<<<<< Updated upstream
 exports.postMovie = postMovie;
+=======
+exports.postMovie = postMovie;
+>>>>>>> Stashed changes
