@@ -2,6 +2,9 @@
 const updateMovieModel = require('../models/updateMovie.js').updateMovie;
 
 async function putMovie(req, res, next) {
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+
     const objReturn = {
         data: null,
         error: null
